@@ -3,7 +3,7 @@ import { combineReducers } from "redux";
 const SongReducer = () => {
   return [
     { title: "kaho na kaho", duration: "2:00" },
-    { ttitle: "noha", duration: "3:00" }
+    { title: "noha", duration: "3:00" }
   ];
 };
 
