@@ -1,25 +1,28 @@
+import "./SongList.css";
 import React from "react";
 import { connect } from "react-redux";
 
 class SongList extends React.Component {
-  renderList = () => {
+  renderList() {
     return this.props.songs.map(song => {
       return (
-        <div>
-          <h2>{song.title}</h2>
-          <button type="submit">Submit</button>
-        </div>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <span>{song.title}</span>
+            <button>SelecT</button>
+          </li>
+        </ul>
       );
     });
-  };
+  }
 
   render() {
-    return <div>{this.renderList}</div>;
+    return <div>{this.renderList()}</div>;
   }
 }
 
 const mapStateToProps = state => {
-  console.log(state);
+  return { songs: state.songs };
 };
 
 export default connect(mapStateToProps)(SongList);
