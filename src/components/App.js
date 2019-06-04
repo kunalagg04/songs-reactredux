@@ -1,5 +1,7 @@
+import "./App.css";
 import React from "react";
 import SongList from "./SongList";
+import SongDetails from "./SongDetails";
 
 const App = () => {
   return (
@@ -7,6 +9,9 @@ const App = () => {
       <div class="container">
         <div class="col-lg-6">
           <SongList />
+        </div>
+        <div class="col-lg-6">
+          <SongDetails />
         </div>
       </div>
     </div>
